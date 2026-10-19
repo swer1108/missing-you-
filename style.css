@@ -142,32 +142,37 @@ body {
 
 /* ===== MAGICAL OCEAN WAVES ===== */
 
+
+/* ===== REALISTIC NIGHT OCEAN WAVES ===== */
+
 .waves {
     position: absolute;
     inset: 0;
-    opacity: 0.65;
+    opacity: 0.7;
+    pointer-events: none;
+
     background:
-        repeating-linear-gradient(
-            175deg,
+        repeating-radial-gradient(
+            ellipse at 50% 100%,
             transparent 0px,
-            transparent 12px,
-            rgba(235, 215, 255, 0.08) 13px,
-            rgba(235, 215, 255, 0.28) 14px,
-            transparent 17px,
-            transparent 29px
+            transparent 18px,
+            rgba(230, 210, 255, 0.18) 19px,
+            rgba(230, 210, 255, 0.32) 20px,
+            transparent 22px,
+            transparent 38px
         ),
         repeating-linear-gradient(
-            185deg,
+            178deg,
             transparent 0px,
-            transparent 22px,
-            rgba(190, 160, 255, 0.12) 23px,
-            rgba(225, 205, 255, 0.22) 24px,
-            transparent 27px,
-            transparent 42px
+            transparent 24px,
+            rgba(195, 165, 255, 0.12) 25px,
+            rgba(235, 220, 255, 0.28) 26px,
+            transparent 28px,
+            transparent 48px
         );
 
-    background-size: 180px 100%, 240px 100%;
-    animation: wavesMove 10s linear infinite;
+    background-size: 100% 180px, 220px 100%;
+    animation: wavesMove 12s linear infinite;
 }
 
 @keyframes wavesMove {
@@ -176,9 +181,10 @@ body {
     }
 
     to {
-        background-position: 180px 0, -240px 0;
+        background-position: 0 180px, 220px 0;
     }
 }
+
 
 
 /* ===== LOVE MESSAGE ===== */
