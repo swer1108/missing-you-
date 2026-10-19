@@ -145,45 +145,83 @@ body {
 
 /* ===== REALISTIC NIGHT OCEAN WAVES ===== */
 
+
+/* ===== SOFT, CURVED OCEAN WAVES ===== */
+
 .waves {
     position: absolute;
     inset: 0;
-    opacity: 0.7;
+    overflow: hidden;
     pointer-events: none;
-
-    background:
-        repeating-radial-gradient(
-            ellipse at 50% 100%,
-            transparent 0px,
-            transparent 18px,
-            rgba(230, 210, 255, 0.18) 19px,
-            rgba(230, 210, 255, 0.32) 20px,
-            transparent 22px,
-            transparent 38px
-        ),
-        repeating-linear-gradient(
-            178deg,
-            transparent 0px,
-            transparent 24px,
-            rgba(195, 165, 255, 0.12) 25px,
-            rgba(235, 220, 255, 0.28) 26px,
-            transparent 28px,
-            transparent 48px
-        );
-
-    background-size: 100% 180px, 220px 100%;
-    animation: wavesMove 12s linear infinite;
+    opacity: 0.75;
 }
 
-@keyframes wavesMove {
+.waves::before,
+.waves::after {
+    content: "";
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: 220px;
+    bottom: -70px;
+    border-radius: 42% 58% 0 0 / 18% 22% 0 0;
+}
+
+.waves::before {
+    background:
+        repeating-linear-gradient(
+            180deg,
+            transparent 0px,
+            transparent 17px,
+            rgba(225, 205, 255, 0.28) 18px,
+            transparent 20px,
+            transparent 31px
+        );
+
+    border-top: 2px solid rgba(225, 205, 255, 0.35);
+    animation: oceanWaveOne 9s ease-in-out infinite alternate;
+}
+
+.waves::after {
+    bottom: -90px;
+    height: 190px;
+    opacity: 0.65;
+    border-radius: 55% 45% 0 0 / 24% 16% 0 0;
+
+    background:
+        repeating-linear-gradient(
+            180deg,
+            transparent 0px,
+            transparent 22px,
+            rgba(185, 155, 255, 0.22) 23px,
+            transparent 25px,
+            transparent 39px
+        );
+
+    border-top: 2px solid rgba(200, 175, 255, 0.25);
+    animation: oceanWaveTwo 12s ease-in-out infinite alternate;
+}
+
+@keyframes oceanWaveOne {
     from {
-        background-position: 0 0, 0 0;
+        transform: translateX(-2%) translateY(0) rotate(-1deg);
     }
 
     to {
-        background-position: 0 180px, 220px 0;
+        transform: translateX(2%) translateY(-12px) rotate(1deg);
     }
 }
+
+@keyframes oceanWaveTwo {
+    from {
+        transform: translateX(2%) translateY(0) rotate(1deg);
+    }
+
+    to {
+        transform: translateX(-2%) translateY(-9px) rotate(-1deg);
+    }
+}
+
 
 
 
