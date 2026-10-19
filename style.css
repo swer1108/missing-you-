@@ -148,77 +148,84 @@ body {
 
 /* ===== SOFT, CURVED OCEAN WAVES ===== */
 
+
+/* ===== CURVED OCEAN WAVES ===== */
+
 .waves {
     position: absolute;
     inset: 0;
     overflow: hidden;
     pointer-events: none;
-    opacity: 0.75;
+    opacity: 0.8;
 }
 
 .waves::before,
 .waves::after {
     content: "";
     position: absolute;
-    left: -50%;
-    width: 200%;
-    height: 220px;
-    bottom: -70px;
-    border-radius: 42% 58% 0 0 / 18% 22% 0 0;
+    left: -10%;
+    width: 120%;
+    height: 45%;
+    bottom: -8%;
+    border-radius: 50% 50% 0 0 / 12% 12% 0 0;
 }
 
 .waves::before {
-    background:
-        repeating-linear-gradient(
-            180deg,
-            transparent 0px,
-            transparent 17px,
-            rgba(225, 205, 255, 0.28) 18px,
-            transparent 20px,
-            transparent 31px
-        );
+    background: linear-gradient(
+        180deg,
+        rgba(218, 190, 255, 0.18),
+        rgba(105, 73, 170, 0.16),
+        rgba(35, 22, 75, 0.4)
+    );
 
-    border-top: 2px solid rgba(225, 205, 255, 0.35);
-    animation: oceanWaveOne 9s ease-in-out infinite alternate;
+    clip-path: polygon(
+        0 25%, 10% 18%, 20% 28%, 30% 16%,
+        40% 25%, 50% 14%, 60% 26%, 70% 17%,
+        80% 27%, 90% 16%, 100% 24%,
+        100% 100%, 0 100%
+    );
+
+    animation: waveFlowOne 8s ease-in-out infinite alternate;
 }
 
 .waves::after {
-    bottom: -90px;
-    height: 190px;
-    opacity: 0.65;
-    border-radius: 55% 45% 0 0 / 24% 16% 0 0;
+    height: 35%;
+    bottom: -10%;
+    opacity: 0.8;
 
-    background:
-        repeating-linear-gradient(
-            180deg,
-            transparent 0px,
-            transparent 22px,
-            rgba(185, 155, 255, 0.22) 23px,
-            transparent 25px,
-            transparent 39px
-        );
+    background: linear-gradient(
+        180deg,
+        rgba(225, 205, 255, 0.2),
+        rgba(125, 88, 190, 0.2),
+        rgba(25, 15, 60, 0.55)
+    );
 
-    border-top: 2px solid rgba(200, 175, 255, 0.25);
-    animation: oceanWaveTwo 12s ease-in-out infinite alternate;
+    clip-path: polygon(
+        0 30%, 12% 20%, 24% 32%, 36% 19%,
+        48% 29%, 60% 18%, 72% 31%, 84% 20%,
+        100% 28%, 100% 100%, 0 100%
+    );
+
+    animation: waveFlowTwo 10s ease-in-out infinite alternate;
 }
 
-@keyframes oceanWaveOne {
+@keyframes waveFlowOne {
     from {
-        transform: translateX(-2%) translateY(0) rotate(-1deg);
+        transform: translateX(-2%) translateY(0);
     }
 
     to {
-        transform: translateX(2%) translateY(-12px) rotate(1deg);
+        transform: translateX(2%) translateY(-12px);
     }
 }
 
-@keyframes oceanWaveTwo {
+@keyframes waveFlowTwo {
     from {
-        transform: translateX(2%) translateY(0) rotate(1deg);
+        transform: translateX(2%) translateY(0);
     }
 
     to {
-        transform: translateX(-2%) translateY(-9px) rotate(-1deg);
+        transform: translateX(-2%) translateY(-8px);
     }
 }
 
