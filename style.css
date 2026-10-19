@@ -102,62 +102,84 @@ body {
 
 /* ===== MOONLIGHT ON WATER ===== */
 
+
+/* ===== MAGICAL MOONLIGHT REFLECTION ===== */
+
 .moonlight {
     position: absolute;
     top: 0;
     left: 50%;
-    width: 30%;
+    width: 38%;
     height: 100%;
     transform: translateX(-50%);
+    pointer-events: none;
     background: linear-gradient(
         to bottom,
-        rgba(255, 224, 246, 0.8),
-        rgba(223, 178, 255, 0.35) 25%,
-        rgba(255, 211, 242, 0.12) 65%,
-        transparent
+        rgba(255, 242, 255, 0.82) 0%,
+        rgba(225, 192, 255, 0.48) 15%,
+        rgba(202, 164, 255, 0.24) 42%,
+        rgba(255, 209, 244, 0.12) 68%,
+        transparent 100%
     );
-    filter: blur(12px);
-    animation: shimmer 4s ease-in-out infinite alternate;
+    filter: blur(9px);
+    animation: moonlightShimmer 5s ease-in-out infinite alternate;
 }
 
-@keyframes shimmer {
+@keyframes moonlightShimmer {
     from {
-        opacity: 0.45;
-        transform: translateX(-50%) scaleX(0.8);
+        opacity: 0.55;
+        transform: translateX(-50%) scaleX(0.72);
     }
 
     to {
         opacity: 1;
-        transform: translateX(-50%) scaleX(1.15);
+        transform: translateX(-50%) scaleX(1.12);
     }
 }
 
 /* ===== WAVES ===== */
 
+
+/* ===== MAGICAL OCEAN WAVES ===== */
+
 .waves {
     position: absolute;
     inset: 0;
-    opacity: 0.6;
-    background: repeating-linear-gradient(
-        175deg,
-        transparent 0px,
-        transparent 17px,
-        rgba(232, 205, 255, 0.25) 18px,
-        transparent 20px,
-        transparent 34px
-    );
-    animation: wavesMove 8s linear infinite;
+    opacity: 0.65;
+    background:
+        repeating-linear-gradient(
+            175deg,
+            transparent 0px,
+            transparent 12px,
+            rgba(235, 215, 255, 0.08) 13px,
+            rgba(235, 215, 255, 0.28) 14px,
+            transparent 17px,
+            transparent 29px
+        ),
+        repeating-linear-gradient(
+            185deg,
+            transparent 0px,
+            transparent 22px,
+            rgba(190, 160, 255, 0.12) 23px,
+            rgba(225, 205, 255, 0.22) 24px,
+            transparent 27px,
+            transparent 42px
+        );
+
+    background-size: 180px 100%, 240px 100%;
+    animation: wavesMove 10s linear infinite;
 }
 
 @keyframes wavesMove {
     from {
-        background-position: 0 0;
+        background-position: 0 0, 0 0;
     }
 
     to {
-        background-position: 120px 0;
+        background-position: 180px 0, -240px 0;
     }
 }
+
 
 /* ===== LOVE MESSAGE ===== */
 
