@@ -341,16 +341,4 @@ body {
     box-shadow: 0 -8px 25px rgba(255, 220, 245, 0.45);
 }
 
-.ocean .shore {
-    display: block !important;
-    position: absolute !important;
-    z-index: 9999 !important;
-    left: 0 !important;
-    bottom: 0 !important;
-    width: 100% !important;
-    height: 120px !important;
-    background: #ff00ff !important;
-    clip-path: none !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
+
