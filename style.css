@@ -191,13 +191,14 @@ body {
     border-radius: 50% 50% 0 0 / 12% 12% 0 0;
 }
 
-.waves::before {
-    background: linear-gradient(
-        180deg,
-        rgba(218, 190, 255, 0.18),
-        rgba(105, 73, 170, 0.16),
-        rgba(35, 22, 75, 0.4)
-    );
+
+background: linear-gradient(
+    180deg,
+    rgba(245, 220, 255, 0.45) 0%,
+    rgba(190, 135, 235, 0.30) 35%,
+    rgba(110, 70, 170, 0.22) 70%,
+    rgba(55, 35, 105, 0.12) 100%
+);
 
     clip-path: polygon(
         0 25%, 10% 18%, 20% 28%, 30% 16%,
