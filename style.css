@@ -323,67 +323,64 @@ body {
 
    
 
-background-color: #e8c3df;
+
+background-color: #e8d0a0;
 background-image:
-    /* Tiny grains of sand */
-    radial-gradient(circle, rgba(255,255,255,0.45) 0.7px, transparent 1.3px),
-    radial-gradient(circle, rgba(111,72,130,0.18) 0.8px, transparent 1.5px),
+    /* Fine grains of sand */
+    radial-gradient(
+        circle,
+        rgba(120, 85, 45, 0.22) 0.8px,
+        transparent 1.3px
+    ),
+    radial-gradient(
+        circle,
+        rgba(255, 248, 220, 0.8) 0.8px,
+        transparent 1.5px
+    ),
 
-    /* Little bubbles along the beach */
-    radial-gradient(circle at 8% 18%,
+    /* Tiny sea bubbles on the sand */
+    radial-gradient(
+        circle at 12% 18%,
         transparent 0 3px,
-        rgba(255,255,255,0.85) 3.5px 4.5px,
-        transparent 5px),
-    radial-gradient(circle at 22% 27%,
+        rgba(255, 255, 255, 0.85) 3.5px 4.5px,
+        transparent 5px
+    ),
+    radial-gradient(
+        circle at 29% 27%,
         transparent 0 2px,
-        rgba(255,255,255,0.8) 2.5px 3.5px,
-        transparent 4px),
-    radial-gradient(circle at 39% 16%,
+        rgba(255, 255, 255, 0.8) 2.5px 3.5px,
+        transparent 4px
+    ),
+    radial-gradient(
+        circle at 48% 15%,
         transparent 0 4px,
-        rgba(255,255,255,0.75) 4.5px 5.5px,
-        transparent 6px),
-    radial-gradient(circle at 57% 25%,
+        rgba(255, 255, 255, 0.8) 4.5px 5.5px,
+        transparent 6px
+    ),
+    radial-gradient(
+        circle at 68% 25%,
         transparent 0 2px,
-        rgba(255,255,255,0.85) 2.5px 3.5px,
-        transparent 4px),
-    radial-gradient(circle at 73% 15%,
+        rgba(255, 255, 255, 0.85) 2.5px 3.5px,
+        transparent 4px
+    ),
+    radial-gradient(
+        circle at 87% 17%,
         transparent 0 3px,
-        rgba(255,255,255,0.8) 3.5px 4.5px,
-        transparent 5px),
-    radial-gradient(circle at 91% 24%,
-        transparent 0 4px,
-        rgba(255,255,255,0.75) 4.5px 5.5px,
-        transparent 6px),
+        rgba(255, 255, 255, 0.85) 3.5px 4.5px,
+        transparent 5px
+    ),
 
-    /* Pink sand fading into lavender */
+    /* Natural golden beach sand */
     linear-gradient(
         to bottom,
-        #fff0f7 0%,
-        #f8d9ec 20%,
-        #edc3e4 45%,
-        #d5a9dc 72%,
-        #b995d0 100%
+        #f5e3bd 0%,
+        #ead2a2 30%,
+        #dfc18c 65%,
+        #cbaa78 100%
     );
 
 background-size:
     9px 9px,
     13px 13px,
     100% 100%;
-
-    clip-path: polygon(
-        0 20%,
-        15% 12%,
-        30% 24%,
-        45% 10%,
-        60% 22%,
-        75% 13%,
-        90% 21%,
-        100% 15%,
-        100% 100%,
-        0 100%
-    );
-
-    box-shadow: 0 -8px 25px rgba(255, 220, 245, 0.45);
-}
-
 
