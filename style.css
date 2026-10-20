@@ -169,13 +169,16 @@ body {
 
 /* ===== CURVED OCEAN WAVES ===== */
 
+
 .waves {
     position: absolute;
     inset: 0;
+    z-index: 2;
     overflow: hidden;
     pointer-events: none;
     opacity: 0.8;
 }
+
 
 .waves::before,
 .waves::after {
@@ -312,7 +315,7 @@ body {
 .shore {
   
     position: absolute;
-    z-index: 5;
+   z-index: 1;
     left: -5%;
     bottom: 0;
     width: 110%;
