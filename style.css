@@ -310,6 +310,7 @@ body {
 /* ===== OUR VISIBLE PURPLE BEACH ===== */
 
 .shore {
+    display: none;
     position: absolute;
     z-index: 5;
     left: -5%;
