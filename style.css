@@ -306,34 +306,38 @@ body {
 }
 /* ===== OUR DREAMY PURPLE BEACH ===== */
 
+
+/* ===== OUR VISIBLE PURPLE BEACH ===== */
+
 .shore {
     position: absolute;
-    z-index: 1;
-    left: -10%;
-    bottom: -8%;
-    width: 120%;
-    height: 27%;
+    z-index: 5;
+    left: -5%;
+    bottom: 0;
+    width: 110%;
+    height: 32%;
 
     background: linear-gradient(
         to bottom,
-        #f4c9df 0%,
-        #d9a5cb 28%,
-        #ad82b8 65%,
-        #775b98 100%
+        #ffe0ed 0%,
+        #f5c5dc 20%,
+        #dfacd0 55%,
+        #b78cc4 100%
     );
 
     clip-path: polygon(
-        0 30%,
-        12% 24%,
-        24% 32%,
-        38% 20%,
-        52% 29%,
-        67% 22%,
-        82% 31%,
-        100% 23%,
+        0 20%,
+        15% 12%,
+        30% 24%,
+        45% 10%,
+        60% 22%,
+        75% 13%,
+        90% 21%,
+        100% 15%,
         100% 100%,
         0 100%
     );
 
-    box-shadow: 0 -8px 30px rgba(255, 205, 239, 0.2);
+    box-shadow: 0 -8px 25px rgba(255, 220, 245, 0.45);
 }
+
