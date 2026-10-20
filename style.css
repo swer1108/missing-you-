@@ -173,7 +173,7 @@ body {
 .waves {
     position: absolute;
     inset: 0;
-    z-index: 2;
+    z-index: 1;
     overflow: hidden;
     pointer-events: none;
     opacity: 0.8;
