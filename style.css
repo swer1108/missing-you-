@@ -384,3 +384,64 @@ background-size:
     13px 13px,
     100% 100%;
 
+/* Little sea bubbles left behind by the tide */
+.beach-bubbles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 32%;
+    z-index: 3;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.beach-bubbles::before,
+.beach-bubbles::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: bubblesWash 5s ease-in-out infinite;
+}
+
+.beach-bubbles::before {
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.8) 0 1px, transparent 2px),
+        radial-gradient(circle, transparent 0 3px, rgba(255,255,255,0.9) 3.5px 4.5px, transparent 5px),
+        radial-gradient(circle, transparent 0 2px, rgba(255,255,255,0.75) 2.5px 3.5px, transparent 4px),
+        radial-gradient(circle, transparent 0 4px, rgba(255,255,255,0.7) 4.5px 5.5px, transparent 6px),
+        radial-gradient(circle, rgba(255,255,255,0.7) 0 1px, transparent 2px);
+    background-size: 100% 100%;
+    background-position: 12% 15%, 28% 25%, 49% 12%, 72% 23%, 88% 17%;
+}
+
+.beach-bubbles::after {
+    background-image:
+        radial-gradient(circle, transparent 0 2px, rgba(255,255,255,0.8) 2.5px 3.5px, transparent 4px),
+        radial-gradient(circle, transparent 0 3px, rgba(255,255,255,0.85) 3.5px 4.5px, transparent 5px),
+        radial-gradient(circle, rgba(255,255,255,0.75) 0 1px, transparent 2px),
+        radial-gradient(circle, transparent 0 2px, rgba(255,255,255,0.7) 2.5px 3.5px, transparent 4px);
+    background-position: 20% 55%, 43% 40%, 66% 60%, 83% 43%;
+    animation-delay: 2.5s;
+}
+
+@keyframes bubblesWash {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    25% {
+        opacity: 0.85;
+    }
+    65% {
+        opacity: 0.65;
+        transform: translateY(-3px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-7px);
+    }
+}
+
