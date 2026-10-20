@@ -180,54 +180,59 @@ body {
 }
 
 
+
+.waves {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
 .waves::before,
 .waves::after {
     content: "";
     position: absolute;
     left: -10%;
     width: 120%;
-    height: 45%;
-    bottom: 5%;
     border-radius: 50% 50% 0 0 / 12% 12% 0 0;
 }
 
-
-background: linear-gradient(
-    180deg,
-    rgba(245, 220, 255, 0.45) 0%,
-    rgba(190, 135, 235, 0.30) 35%,
-    rgba(110, 70, 170, 0.22) 70%,
-    rgba(55, 35, 105, 0.12) 100%
-);
-
+.waves::before {
+    height: 45%;
+    bottom: -8%;
+    background: linear-gradient(
+        180deg,
+        rgba(245, 220, 255, 0.45) 0%,
+        rgba(190, 135, 235, 0.30) 35%,
+        rgba(110, 70, 170, 0.22) 70%,
+        rgba(55, 35, 105, 0.12) 100%
+    );
     clip-path: polygon(
         0 25%, 10% 18%, 20% 28%, 30% 16%,
         40% 25%, 50% 14%, 60% 26%, 70% 17%,
         80% 27%, 90% 16%, 100% 24%,
         100% 100%, 0 100%
     );
-
     animation: waveFlowOne 8s ease-in-out infinite alternate;
 }
 
 .waves::after {
     height: 35%;
-    bottom: -2%;
+    bottom: -10%;
     opacity: 0.8;
-
     background: linear-gradient(
         180deg,
         rgba(225, 205, 255, 0.2),
         rgba(125, 88, 190, 0.2),
         rgba(25, 15, 60, 0.55)
     );
-
     clip-path: polygon(
         0 30%, 12% 20%, 24% 32%, 36% 19%,
         48% 29%, 60% 18%, 72% 31%, 84% 20%,
         100% 28%, 100% 100%, 0 100%
     );
-
     animation: waveFlowTwo 10s ease-in-out infinite alternate;
 }
 
@@ -235,7 +240,6 @@ background: linear-gradient(
     from {
         transform: translateX(-2%) translateY(0);
     }
-
     to {
         transform: translateX(2%) translateY(-12px);
     }
@@ -245,15 +249,10 @@ background: linear-gradient(
     from {
         transform: translateX(2%) translateY(0);
     }
-
     to {
         transform: translateX(-2%) translateY(-8px);
     }
 }
-
-
-
-
 /* ===== LOVE MESSAGE ===== */
 
 .love-message {
