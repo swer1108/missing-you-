@@ -566,3 +566,24 @@ clip-path: polygon(
     pointer-events: none;
 }
 
+/* ===== SHIMMERING WET SAND ===== */
+
+.shore {
+    isolation: isolate;
+}
+
+.shore .wet-sand-placeholder {
+    display: none;
+}
+
+.shore {
+    --wet-sand-shimmer:
+        linear-gradient(
+            108deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.16) 42%,
+            rgba(190, 235, 228, 0.20) 50%,
+            transparent 72%
+        );
+}
+
