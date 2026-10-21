@@ -573,18 +573,23 @@ clip-path: polygon(
     background-size: 200% 100%;
     background-position: 100% 0;
 
-    animation: wetSandShimmer 8s ease-in-out infinite;
+    animation: wetSandShimmer 5s ease-in-out infinite;
 }
 
 @keyframes wetSandShimmer {
-    0%, 100% {
+    0% {
         background-position: 100% 0;
-        opacity: 0.35;
+        opacity: 0.3;
     }
 
     50% {
         background-position: 0% 0;
-        opacity: 0.8;
+        opacity: 1;
+    }
+
+    100% {
+        background-position: 100% 0;
+        opacity: 0.3;
     }
 }
 
