@@ -556,14 +556,15 @@ clip-path: polygon(
 
     pointer-events: none;
 
-    background: linear-gradient(
-        110deg,
-        transparent 15%,
-        rgba(255, 255, 255, 0.08) 35%,
-        rgba(190, 235, 228, 0.22) 50%,
-        rgba(255, 255, 255, 0.08) 65%,
-        transparent 85%
-    );
+    
+background: linear-gradient(
+    180deg,
+    rgba(190, 235, 228, 0.20) 0%,
+    rgba(225, 215, 255, 0.16) 35%,
+    rgba(255, 255, 255, 0.10) 65%,
+    transparent 100%
+);
+
 
     background-size: 200% 100%;
     background-position: 100% 0;
