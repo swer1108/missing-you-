@@ -571,22 +571,39 @@ clip-path: polygon(
     animation: wetSandShimmer 5s ease-in-out infinite;
 }
 
-@keyframes wetSandShimmer {
-    0% {
-        background-position: 100% 0;
-        opacity: 0.3;
+
+/* ===== GENTLE WHITE WAVE CREST ===== */
+
+.shore {
+    overflow: hidden;
+}
+
+.shore::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 18px;
+    border-radius: 50%;
+    border-top: 3px solid rgba(255, 255, 255, 0.7);
+    filter: blur(2px);
+    pointer-events: none;
+    animation: gentleCrest 5s ease-in-out infinite alternate;
+}
+
+@keyframes gentleCrest {
+    from {
+        transform: translateX(-1%) translateY(2px);
+        opacity: 0.45;
     }
 
-    50% {
-        background-position: 0% 0;
-        opacity: 1;
-    }
-
-    100% {
-        background-position: 100% 0;
-        opacity: 0.3;
+    to {
+        transform: translateX(1%) translateY(-2px);
+        opacity: 0.85;
     }
 }
+
 
 
 
