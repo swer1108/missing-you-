@@ -615,18 +615,25 @@ background: linear-gradient(
     overflow: visible;
 }
 
+
 .moon-cloud {
     position: absolute;
     top: 48%;
     left: -8px;
-width: 58px;
-height: 18px;
+    width: 58px;
+    height: 18px;
     border-radius: 50%;
-    background: rgba(199, 174, 232, 0.75);
-    filter: blur(3px);
+
+    background: rgba(175, 145, 210, 0.9);
+
+    filter: blur(2px);
+
     box-shadow:
-        8px -5px 10px rgba(199, 174, 232, 0.45),
-        22px -2px 12px rgba(222, 199, 245, 0.5);
+        5px -5px 8px rgba(195, 165, 230, 0.8),
+        16px -7px 10px rgba(215, 190, 240, 0.7),
+        30px -3px 9px rgba(175, 145, 215, 0.8),
+        42px 1px 10px rgba(210, 185, 235, 0.6);
+
     pointer-events: none;
 }
 
