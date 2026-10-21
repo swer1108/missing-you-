@@ -523,27 +523,6 @@ clip-path: polygon(
     }
 }
 
-/* ===== GENTLE SHORELINE FOAM ===== */
-
-.shore::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 12px;
-
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.75),
-        rgba(255, 255, 255, 0.25),
-        transparent
-    );
-
-    filter: blur(3px);
-    border-radius: 50%;
-    pointer-events: none;
-}
 
 /* ===== AQUA WASH AT THE SHORE ===== */
 
@@ -566,24 +545,5 @@ clip-path: polygon(
     pointer-events: none;
 }
 
-/* ===== SHIMMERING WET SAND ===== */
 
-.shore {
-    isolation: isolate;
-}
-
-.shore .wet-sand-placeholder {
-    display: none;
-}
-
-.shore {
-    --wet-sand-shimmer:
-        linear-gradient(
-            108deg,
-            transparent 20%,
-            rgba(255, 255, 255, 0.16) 42%,
-            rgba(190, 235, 228, 0.20) 50%,
-            transparent 72%
-        );
-}
 
