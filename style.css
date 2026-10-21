@@ -631,7 +631,7 @@ background: linear-gradient(
     height: 20px;
     border-radius: 50%;
 
-    background: #b99bd8;
+    background: #c6afe3;
 
     box-shadow:
         8px -7px 0 1px #c7afe3,
@@ -643,7 +643,7 @@ background: linear-gradient(
         105px 0 0 -5px #b99bd8;
 
     opacity: 0.97;
-    filter: drop-shadow(0 0 6px rgba(201, 174, 235, 0.65));
+    filter: blur(2px) drop-shadow(0 0 6px rgba(201, 174, 235, 0.65));
 
     pointer-events: none;
 }
