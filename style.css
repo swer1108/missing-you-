@@ -617,27 +617,33 @@ background: linear-gradient(
 
 
 
+
+/* ===== LAVENDER CLOUD ACROSS THE MOON ===== */
+
 .moon-cloud {
     position: absolute;
-    top: 43%;
-    left: -8px;
-    width: 62px;
-    height: 17px;
-    border-radius: 12px;
+    top: 67%;
+    left: -28px;
+    width: 112px;
+    height: 19px;
+    border-radius: 50%;
 
-    background: #bba0dc;
+    background: #b89ad9;
 
     box-shadow:
-        5px -8px 0 -2px #cbb4e8,
-        18px -11px 0 -1px #d6c2ed,
-        32px -6px 0 -2px #c4a9e2,
-        43px -2px 0 -5px #bba0dc;
+        8px -9px 0 -2px #c9afe6,
+        24px -13px 0 0 #d5bdea,
+        43px -10px 0 1px #c6a6e2,
+        61px -6px 0 -1px #d0b6e8,
+        78px -2px 0 -3px #b89ad9,
+        30px 2px 12px rgba(190, 157, 224, 0.65);
 
     opacity: 0.96;
-    filter: drop-shadow(0 0 5px rgba(201, 174, 235, 0.45));
+    filter: drop-shadow(0 0 5px rgba(202, 174, 238, 0.6));
 
     pointer-events: none;
 }
+
 
 
 
