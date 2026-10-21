@@ -609,6 +609,27 @@ background: linear-gradient(
     }
 }
 
+/* ===== A LITTLE CLOUD ACROSS THE MOON ===== */
+
+.moon {
+    overflow: visible;
+}
+
+.moon-cloud {
+    position: absolute;
+    top: 48%;
+    left: -12px;
+    width: 48px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(199, 174, 232, 0.75);
+    filter: blur(5px);
+    box-shadow:
+        8px -5px 10px rgba(199, 174, 232, 0.45),
+        22px -2px 12px rgba(222, 199, 245, 0.5);
+    pointer-events: none;
+}
+
 
 
 
