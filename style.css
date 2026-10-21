@@ -506,8 +506,8 @@ clip-path: polygon(
             transparent 75%
         );
 
-    filter: blur(3px);
-    opacity: 0.8;
+    filter: blur(6px);
+    opacity: 0.65;
     animation: shoreFoam 4s ease-in-out infinite alternate;
 }
 
