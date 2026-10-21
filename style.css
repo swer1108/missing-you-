@@ -402,10 +402,12 @@ clip-path: polygon(
     76% 8%,
     87% 5%,
     100% 7%,
-    100% 100%,
+        100% 100%,
     0% 100%
 );
 
+/* Close the beach styling */
+}
 
 /* Little sea bubbles left behind by the tide */
 .beach-bubbles {
